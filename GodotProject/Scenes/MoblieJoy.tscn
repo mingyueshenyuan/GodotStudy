@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm1305wx2ly3x"]
+
+[ext_resource type="Script" path="res://Scripts/Mobile_Joy.gd" id="1_ybbf3"]
+[ext_resource type="Texture2D" uid="uid://hm6aqxmhp84w" path="res://icon.svg" id="2_bt1mn"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_ybbf3")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BigJoy" type="Sprite2D" parent="Control"]
+texture = ExtResource("2_bt1mn")
+
+[node name="SmallJoy" type="Sprite2D" parent="Control"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_bt1mn")

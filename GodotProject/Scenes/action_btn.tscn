@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d22k6s7yj00qf"]
+
+[ext_resource type="Script" path="res://Scripts/ActionBtn.gd" id="1_u1n28"]
+[ext_resource type="Texture2D" uid="uid://hm6aqxmhp84w" path="res://icon.svg" id="2_l4sve"]
+
+[node name="ActionBtn" type="CanvasLayer"]
+script = ExtResource("1_u1n28")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -203.0
+offset_top = -198.0
+offset_right = -67.0
+offset_bottom = -62.0
+grow_horizontal = 0
+grow_vertical = 0
+icon = ExtResource("2_l4sve")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
